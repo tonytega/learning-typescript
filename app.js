@@ -1,15 +1,32 @@
-function add(num1, num2, showResult, phrase) {
-    var result = num1 + num2;
-    if (showResult) {
-        console.log(phrase + result);
-    }
-    else {
-        return result;
-    }
-}
-var number1 = 5.7;
-var number2 = 5;
-var printResult = true;
-var resultPhrase = 'Result is: ';
-var result = add(number1, number2, printResult, resultPhrase);
-// console.log(result)
+// const person: {
+//     name : string;
+//     age : number
+// } = {
+//     name : 'tonytega',
+//     age : 100,
+// }
+// const person: {
+//         name : string;
+//         age : number;
+//         hobbies : string[];
+//         role: [number,string]
+//     }  = {
+//     name : 'tonytega',
+//     age : 100,
+//     hobbies : ['day','dia'],
+//     role : [12, 'author']
+// }
+var Role;
+(function (Role) {
+    Role[Role["ADMIN"] = 0] = "ADMIN";
+    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
+    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+})(Role || (Role = {}));
+;
+var person = {
+    name: 'tonytega',
+    age: 100,
+    hobbies: ['day', 'dia'],
+    role: Role.ADMIN
+};
+console.log(person.role);

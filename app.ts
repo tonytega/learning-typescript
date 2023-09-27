@@ -1,19 +1,30 @@
-function add(num1:number,num2:number,showResult:boolean,phrase: string){
-    const result = num1 + num2
+// const person: {
+//     name : string;
+//     age : number
+// } = {
+//     name : 'tonytega',
+//     age : 100,
+// }
+// const person: {
+//         name : string;
+//         age : number;
+//         hobbies : string[];
+//         role: [number,string]
+//     }  = {
+//     name : 'tonytega',
+//     age : 100,
+//     hobbies : ['day','dia'],
+//     role : [12, 'author']
+// }
+enum Role { ADMIN, READ_ONLY, AUTHOR};
 
-    if (showResult){
-        console.log(phrase + result)
-    }else{
-        return result
-    }
-    
+const person = {
+    name : 'tonytega',
+    age : 100,
+    hobbies : ['day','dia'],
+    role : Role.ADMIN
 }
 
-const number1 = 5.7
-const number2 = 5
-const printResult = true
-const resultPhrase = 'Result is: '
 
-const result = add(number1,number2,printResult,resultPhrase)
 
-// console.log(result)
+console.log(person.role)
