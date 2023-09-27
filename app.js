@@ -1,32 +1,15 @@
-// const person: {
-//     name : string;
-//     age : number
-// } = {
-//     name : 'tonytega',
-//     age : 100,
-// }
-// const person: {
-//         name : string;
-//         age : number;
-//         hobbies : string[];
-//         role: [number,string]
-//     }  = {
-//     name : 'tonytega',
-//     age : 100,
-//     hobbies : ['day','dia'],
-//     role : [12, 'author']
-// }
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-;
-var person = {
-    name: 'tonytega',
-    age: 100,
-    hobbies: ['day', 'dia'],
-    role: Role.ADMIN
-};
-console.log(person.role);
+function combine(input1, input2) {
+    var result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+        return result;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+        return result;
+    }
+}
+var combinedAges = combine(1, 32);
+console.log(combinedAges);
+var combinedNames = combine('Zoe ', 'Saldana');
+console.log(combinedNames);
